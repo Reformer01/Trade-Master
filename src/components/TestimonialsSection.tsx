@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -6,40 +7,40 @@ import { Card } from "./ui/card";
 
 const testimonials = [
   {
-    name: "Michael Chen",
+    name: "Adebayo Okonkwo",
     role: "Professional Trader",
     image: "https://avatars.githubusercontent.com/u/1234567?v=4",
-    content: "The real-time market data and advanced trading features have significantly improved my trading performance. The platform's security measures give me peace of mind."
+    content: "The real-time market data and advanced trading features have significantly improved my trading performance. The platform's security measures give me complete confidence."
   },
   {
-    name: "Sarah Johnson",
+    name: "Chioma Nwankwo",
     role: "Crypto Fund Manager",
     image: "https://avatars.githubusercontent.com/u/2345678?v=4",
-    content: "CryptoTrade's institutional-grade tools have transformed our trading strategy. The API integration and automated features have saved us countless hours."
+    content: "TradeMaster's institutional-grade tools have transformed our trading strategy. The API integration and automated features have saved us countless hours of manual work."
   },
   {
-    name: "David Wilson",
+    name: "Kemi Adebisi",
     role: "Early Crypto Investor",
     image: "https://avatars.githubusercontent.com/u/3456789?v=4",
-    content: "The customer support is exceptional, and the platform's intuitive design made getting started with crypto trading seamless. A game-changer for both beginners and pros."
+    content: "The customer support is exceptional, and the platform's intuitive design made getting started with crypto trading seamless. A true game-changer for both beginners and professionals."
   },
   {
-    name: "Emily Zhang",
+    name: "Emeka Ogbonna",
     role: "DeFi Developer",
     image: "https://avatars.githubusercontent.com/u/4567890?v=4",
-    content: "We've seen remarkable improvements in our trading efficiency since switching to CryptoTrade. The smart order routing and liquidity aggregation are particularly impressive."
+    content: "We've seen remarkable improvements in our trading efficiency since switching to TradeMaster. The smart order routing and liquidity aggregation features are particularly impressive."
   },
   {
-    name: "James Rodriguez",
+    name: "Funmilayo Ajayi",
     role: "Crypto Security Expert",
     image: "https://avatars.githubusercontent.com/u/5678901?v=4",
-    content: "The security features are robust and the regular updates keep us ahead of emerging threats. It's exactly what the crypto industry needed."
+    content: "The security features are robust and the regular updates keep us ahead of emerging threats. It's exactly what the crypto industry needed for institutional adoption."
   },
   {
-    name: "Lisa Thompson",
+    name: "Olumide Fashola",
     role: "Portfolio Manager",
     image: "https://avatars.githubusercontent.com/u/6789012?v=4",
-    content: "The platform's ability to handle complex trading strategies while maintaining simplicity in its interface is remarkable. It's been invaluable for our portfolio management."
+    content: "The platform's ability to handle complex trading strategies while maintaining simplicity in its interface is remarkable. It's been invaluable for our portfolio management operations."
   }
 ];
 
@@ -56,7 +57,7 @@ const TestimonialsSection = () => {
         >
           <h2 className="text-5xl font-normal mb-4">Trusted by Traders</h2>
           <p className="text-muted-foreground text-lg">
-            Join thousands of satisfied traders on CryptoTrade
+            Join thousands of satisfied traders on TradeMaster
           </p>
         </motion.div>
 

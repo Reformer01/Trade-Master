@@ -58,7 +58,7 @@ const Navigation = () => {
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-2">
             <Command className="w-5 h-5 text-emerald-400" />
-            <span className="font-bold text-base text-emerald-100 font-cinzel">CryptoTrade</span>
+            <span className="font-bold text-base text-emerald-100 font-cinzel">TradeMaster</span>
           </div>
 
           {/* Desktop Navigation */}

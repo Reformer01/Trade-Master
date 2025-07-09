@@ -51,11 +51,11 @@ const Index = () => {
         <div className="max-w-4xl relative z-10">
           <h1 className="text-5xl md:text-7xl font-cinzel mb-4 tracking-tight text-left">
             <span className="text-emerald-100">
-              <TextGenerateEffect words="Trade crypto with" />
+              <TextGenerateEffect words="Master the art of" />
             </span>
             <br />
             <span className="text-gradient font-medium">
-              <TextGenerateEffect words="wisdom & courage" />
+              <TextGenerateEffect words="crypto trading" />
             </span>
           </h1>
           
