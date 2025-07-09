@@ -24,7 +24,7 @@ const Index = () => {
         transition={{ duration: 0.5 }}
         className="relative container px-4 pt-40 pb-20 min-h-screen flex items-center"
         style={{
-          backgroundImage: 'url("/lovable-uploads/e010f861-6384-4cb3-8fe7-fc751708e7fa.png")',
+          backgroundImage: 'url("/images/e010f861-6384-4cb3-8fe7-fc751708e7fa.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
@@ -89,7 +89,7 @@ const Index = () => {
       <div 
         className="relative"
         style={{
-          backgroundImage: 'url("/lovable-uploads/177c7197-0b34-4e0b-95aa-8775ec677a72.png")',
+          backgroundImage: 'url("/images/177c7197-0b34-4e0b-95aa-8775ec677a72.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -105,7 +105,7 @@ const Index = () => {
         id="features" 
         className="relative"
         style={{
-          backgroundImage: 'url("/lovable-uploads/f55465c6-d402-4363-85b9-30df198c9c22.png")',
+          backgroundImage: 'url("/images/f55465c6-d402-4363-85b9-30df198c9c22.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
@@ -125,7 +125,7 @@ const Index = () => {
         id="pricing" 
         className="relative"
         style={{
-          backgroundImage: 'url("/lovable-uploads/68e26d92-dff3-4b67-ba3d-46e9d5db72f2.png")',
+          backgroundImage: 'url("/images/68e26d92-dff3-4b67-ba3d-46e9d5db72f2.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -140,7 +140,7 @@ const Index = () => {
       <div 
         className="relative"
         style={{
-          backgroundImage: 'url("/lovable-uploads/1313e572-d902-4708-8db3-dfec29001e52.png")',
+          backgroundImage: 'url("/images/1313e572-d902-4708-8db3-dfec29001e52.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -155,7 +155,7 @@ const Index = () => {
       <section 
         className="container px-4 py-20 relative"
         style={{
-          backgroundImage: 'url("/lovable-uploads/e8f0fee3-63d4-487c-8b37-bd1fa88575ec.png")',
+          backgroundImage: 'url("/images/e8f0fee3-63d4-487c-8b37-bd1fa88575ec.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -184,7 +184,7 @@ const Index = () => {
       <div 
         className="relative"
         style={{
-          backgroundImage: 'url("/lovable-uploads/1f747d7e-0025-4f65-b0dd-3264135dfbdf.png")',
+          backgroundImage: 'url("/images/1f747d7e-0025-4f65-b0dd-3264135dfbdf.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
