@@ -9,10 +9,12 @@ import LogoCarousel from "@/components/LogoCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { RingAnimation } from "@/components/3d/RingAnimation";
+import { CrystalAnimation } from "@/components/3d/CrystalAnimation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       
       {/* Hero Section with Shire background */}
@@ -28,28 +30,31 @@ const Index = () => {
           backgroundAttachment: 'fixed'
         }}
       >
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+        {/* Enhanced overlay with Shire-like colors */}
+        <div className="absolute inset-0 bg-gradient-to-br from-shire-900/80 via-shire-800/60 to-emerald-900/80 backdrop-blur-sm" />
+        
+        {/* 3D Ring Animation */}
+        <RingAnimation />
         
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="inline-block mb-4 px-4 py-1.5 rounded-full glass relative z-10"
+          className="inline-block mb-4 px-4 py-1.5 rounded-full glass shire-glow relative z-10"
         >
-          <span className="text-sm font-medium text-amber-200">
+          <span className="text-sm font-medium text-emerald-200">
             <Command className="w-4 h-4 inline-block mr-2" />
             Journey into Digital Trading
           </span>
         </motion.div>
         
         <div className="max-w-4xl relative z-10">
-          <h1 className="text-5xl md:text-7xl font-serif mb-4 tracking-tight text-left">
-            <span className="text-amber-100">
+          <h1 className="text-5xl md:text-7xl font-cinzel mb-4 tracking-tight text-left">
+            <span className="text-emerald-100">
               <TextGenerateEffect words="Trade crypto with" />
             </span>
             <br />
-            <span className="text-white font-medium">
+            <span className="text-gradient font-medium">
               <TextGenerateEffect words="wisdom & courage" />
             </span>
           </h1>
@@ -58,10 +63,10 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-amber-200 mb-8 max-w-2xl text-left font-serif"
+            className="text-lg md:text-xl text-emerald-200 mb-8 max-w-2xl text-left font-serif"
           >
             Embark on your cryptocurrency adventure with ancient wisdom and modern technology.{" "}
-            <span className="text-white">Begin your quest today.</span>
+            <span className="text-emerald-100 font-medium">Begin your quest today.</span>
           </motion.p>
           
           <motion.div
@@ -70,10 +75,10 @@ const Index = () => {
             transition={{ delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 items-start"
           >
-            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white border-amber-400 border">
+            <Button size="lg" className="button-gradient text-white border-emerald-400 border shadow-lg shire-glow">
               Begin Your Journey
             </Button>
-            <Button size="lg" variant="link" className="text-amber-200 hover:text-white">
+            <Button size="lg" variant="link" className="text-emerald-200 hover:text-emerald-100 floating-animation">
               Explore Realms <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </motion.div>
@@ -89,7 +94,7 @@ const Index = () => {
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-emerald-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-shire-900/90 via-emerald-900/80 to-shire-800/90" />
         <div className="relative z-10">
           <LogoCarousel />
         </div>
@@ -106,8 +111,11 @@ const Index = () => {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-emerald-950/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-rivendell-900/85 via-emerald-900/75 to-rivendell-800/90" />
         <div className="relative z-10">
+          <div className="container px-4 py-12 text-center">
+            <CrystalAnimation />
+          </div>
           <FeaturesSection />
         </div>
       </div>
@@ -122,7 +130,7 @@ const Index = () => {
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-slate-900/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-800/85 to-emerald-900/80" />
         <div className="relative z-10">
           <PricingSection />
         </div>
@@ -137,7 +145,7 @@ const Index = () => {
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-teal-900/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-emerald-900/75 to-slate-800/85" />
         <div className="relative z-10">
           <TestimonialsSection />
         </div>
@@ -152,20 +160,20 @@ const Index = () => {
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-amber-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-mordor-900/80 via-emerald-900/70 to-mordor-800/85" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-amber-950/90 backdrop-blur-lg border border-amber-400/30 rounded-2xl p-8 md:p-12 text-center relative z-10"
+          className="rivendell-shimmer backdrop-blur-lg border border-emerald-400/30 rounded-2xl p-8 md:p-12 text-center relative z-10 shire-glow"
         >
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-amber-100">
+          <h2 className="text-3xl md:text-4xl font-cinzel font-bold mb-4 text-emerald-100">
             Ready to claim your treasure?
           </h2>
-          <p className="text-lg text-amber-200 mb-8 max-w-2xl mx-auto font-serif">
+          <p className="text-lg text-emerald-200 mb-8 max-w-2xl mx-auto font-serif">
             Join the fellowship of traders who have discovered the power of our enchanted platform.
           </p>
-          <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white border-amber-400 border">
+          <Button size="lg" className="button-gradient text-white border-emerald-400 border shadow-xl shire-glow floating-animation">
             Forge Your Account
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
@@ -181,7 +189,7 @@ const Index = () => {
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-slate-900/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-emerald-900/80 to-slate-800/90" />
         <div className="relative z-10">
           <Footer />
         </div>

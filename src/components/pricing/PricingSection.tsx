@@ -1,7 +1,9 @@
+
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CardSpotlight } from "./CardSpotlight";
+import { CoinAnimation } from "@/components/3d/CoinAnimation";
 
 const PricingTier = ({
   name,
@@ -9,35 +11,39 @@ const PricingTier = ({
   description,
   features,
   isPopular,
+  coinColor = "#FFD700"
 }: {
   name: string;
   price: string;
   description: string;
   features: string[];
   isPopular?: boolean;
+  coinColor?: string;
 }) => (
-  <CardSpotlight className={`h-full ${isPopular ? "border-primary" : "border-white/10"} border-2`}>
+  <CardSpotlight className={`h-full ${isPopular ? "border-emerald-400 shire-glow" : "border-emerald-600/30"} border-2 rivendell-shimmer`}>
     <div className="relative h-full p-6 flex flex-col">
+      <CoinAnimation color={coinColor} />
+      
       {isPopular && (
-        <span className="text-xs font-medium bg-primary/10 text-primary rounded-full px-3 py-1 w-fit mb-4">
+        <span className="text-xs font-medium bg-emerald-500/20 text-emerald-300 rounded-full px-3 py-1 w-fit mb-4 border border-emerald-400/30">
           Most Popular
         </span>
       )}
-      <h3 className="text-xl font-medium mb-2">{name}</h3>
+      <h3 className="text-xl font-cinzel font-medium mb-2 text-emerald-100">{name}</h3>
       <div className="mb-4">
-        <span className="text-4xl font-bold">{price}</span>
-        {price !== "Custom" && <span className="text-gray-400">/month</span>}
+        <span className="text-4xl font-bold text-emerald-200">{price}</span>
+        {price !== "Custom" && <span className="text-emerald-400">/month</span>}
       </div>
-      <p className="text-gray-400 mb-6">{description}</p>
+      <p className="text-emerald-300 mb-6 font-serif">{description}</p>
       <ul className="space-y-3 mb-8 flex-grow">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center gap-2">
-            <Check className="w-5 h-5 text-primary" />
-            <span className="text-sm text-gray-300">{feature}</span>
+            <Check className="w-5 h-5 text-emerald-400" />
+            <span className="text-sm text-emerald-200">{feature}</span>
           </li>
         ))}
       </ul>
-      <Button className="button-gradient w-full">
+      <Button className="button-gradient w-full text-white shadow-lg">
         Start Trading
       </Button>
     </div>
@@ -52,7 +58,7 @@ export const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl md:text-6xl font-normal mb-6"
+          className="text-5xl md:text-6xl font-cinzel font-normal mb-6 text-emerald-100"
         >
           Choose Your{" "}
           <span className="text-gradient font-medium">Trading Plan</span>
@@ -61,7 +67,7 @@ export const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.5 }}
-          className="text-lg text-gray-400"
+          className="text-lg text-emerald-300 font-serif"
         >
           Select the perfect trading plan with advanced features and competitive fees
         </motion.p>
@@ -78,6 +84,7 @@ export const PricingSection = () => {
             "Basic market analysis",
             "Email support"
           ]}
+          coinColor="#CD7F32"
         />
         <PricingTier
           name="Pro Trader"
@@ -91,6 +98,7 @@ export const PricingSection = () => {
             "API access"
           ]}
           isPopular
+          coinColor="#FFD700"
         />
         <PricingTier
           name="Institutional"
@@ -104,6 +112,7 @@ export const PricingSection = () => {
             "Custom API integration",
             "24/7 priority support"
           ]}
+          coinColor="#E5E7EB"
         />
       </div>
     </section>

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Command, Menu } from "lucide-react";
 import { Button } from "./ui/button";
@@ -20,7 +21,7 @@ const Navigation = () => {
     if (sectionId === 'testimonials') {
       const testimonialSection = document.querySelector('.animate-marquee');
       if (testimonialSection) {
-        const yOffset = -100; // Offset to account for the fixed header
+        const yOffset = -100;
         const y = testimonialSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
@@ -49,15 +50,15 @@ const Navigation = () => {
     <header
       className={`fixed top-3.5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 rounded-full ${
         isScrolled 
-          ? "h-14 bg-[#1B1B1B]/40 backdrop-blur-xl border border-white/10 scale-95 w-[90%] max-w-2xl" 
-          : "h-14 bg-[#1B1B1B] w-[95%] max-w-3xl"
+          ? "h-14 bg-emerald-950/40 backdrop-blur-xl border border-emerald-400/30 scale-95 w-[90%] max-w-2xl shire-glow" 
+          : "h-14 bg-emerald-950/60 border border-emerald-500/20 w-[95%] max-w-3xl"
       }`}
     >
       <div className="mx-auto h-full px-6">
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-2">
-            <Command className="w-5 h-5 text-primary" />
-            <span className="font-bold text-base">CryptoTrade</span>
+            <Command className="w-5 h-5 text-emerald-400" />
+            <span className="font-bold text-base text-emerald-100 font-cinzel">CryptoTrade</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -72,7 +73,7 @@ const Navigation = () => {
                     item.onClick();
                   }
                 }}
-                className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
+                className="text-sm text-emerald-300 hover:text-emerald-100 transition-all duration-300 font-serif"
               >
                 {item.name}
               </a>
@@ -80,7 +81,7 @@ const Navigation = () => {
             <Button 
               onClick={() => scrollToSection('cta')}
               size="sm"
-              className="button-gradient"
+              className="button-gradient text-white shadow-lg"
             >
               Start Trading
             </Button>
@@ -90,17 +91,17 @@ const Navigation = () => {
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="glass">
-                  <Menu className="h-5 w-5" />
+                <Button variant="outline" size="icon" className="glass border-emerald-400/30">
+                  <Menu className="h-5 w-5 text-emerald-400" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="bg-[#1B1B1B]">
+              <SheetContent className="bg-emerald-950/95 border-emerald-400/30">
                 <div className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-lg text-emerald-300 hover:text-emerald-100 transition-colors font-serif"
                       onClick={(e) => {
                         e.preventDefault();
                         setIsMobileMenuOpen(false);
@@ -117,7 +118,7 @@ const Navigation = () => {
                       setIsMobileMenuOpen(false);
                       scrollToSection('cta');
                     }}
-                    className="button-gradient mt-4"
+                    className="button-gradient mt-4 text-white"
                   >
                     Start Trading
                   </Button>
