@@ -12,7 +12,7 @@ export const FeatureTab = ({ icon, title, description, isActive }: FeatureTabPro
   return (
     <div 
       className={`
-        w-full flex items-center gap-4 p-5 rounded-xl
+        w-full flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl
         transition-all duration-300 relative
         ${isActive 
           ? 'glass shadow-lg shadow-primary/10' 
@@ -29,15 +29,15 @@ export const FeatureTab = ({ icon, title, description, isActive }: FeatureTabPro
           transition={{ duration: 0.2 }}
         />
       )}
-      <div className="flex items-center gap-4 min-w-0">
-        <div className={`${isActive ? 'text-primary' : 'text-muted-foreground'}`}>
+      <div className="flex items-start gap-3 sm:gap-4 w-full min-w-0">
+        <div className={`flex-shrink-0 mt-0.5 ${isActive ? 'text-primary' : 'text-muted-foreground'}`}>
           {icon}
         </div>
-        <div className="text-left min-w-0">
-          <h3 className={`font-semibold truncate text-base ${isActive ? 'text-primary' : ''}`}>
+        <div className="text-left min-w-0 flex-1">
+          <h3 className={`font-semibold text-sm sm:text-base leading-tight mb-1 ${isActive ? 'text-primary' : ''}`}>
             {title}
           </h3>
-          <p className="text-sm text-muted-foreground line-clamp-2">
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed break-words hyphens-auto">
             {description}
           </p>
         </div>

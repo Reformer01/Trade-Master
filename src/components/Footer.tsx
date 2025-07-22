@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="w-full py-12 mt-20">
       <div className="container px-4">
         <div className="glass glass-hover rounded-xl p-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
             <div className="space-y-4">
               <h3 className="font-medium text-lg">TradeMaster</h3>
               <p className="text-sm text-muted-foreground">

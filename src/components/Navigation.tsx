@@ -50,15 +50,19 @@ const Navigation = () => {
     <header
       className={`fixed top-3.5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 rounded-full ${
         isScrolled 
-          ? "h-14 bg-emerald-950/40 backdrop-blur-xl border border-emerald-400/30 scale-95 w-[90%] max-w-2xl shire-glow" 
-          : "h-14 bg-emerald-950/60 border border-emerald-500/20 w-[95%] max-w-3xl"
+          ? "h-14 bg-emerald-950/40 backdrop-blur-xl border border-emerald-400/30 scale-95 w-[90%] sm:w-[85%] max-w-2xl shire-glow" 
+          : "h-14 bg-emerald-950/60 border border-emerald-500/20 w-[95%] sm:w-[90%] max-w-3xl"
       }`}
     >
-      <div className="mx-auto h-full px-6">
+      <div className="mx-auto h-full px-4 sm:px-6">
         <nav className="flex items-center justify-between h-full">
-          <div className="flex items-center gap-2">
-            <Command className="w-5 h-5 text-emerald-400" />
-            <span className="font-bold text-base text-emerald-100 font-cinzel">TradeMaster</span>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <img 
+              src="/logos/logoipsum-381.svg" 
+              alt="CryptoTrade Logo" 
+              className="w-6 h-6 sm:w-8 sm:h-8"
+            />
+            <span className="font-bold text-sm sm:text-base text-emerald-100 font-cinzel">CryptoTrade</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -79,7 +83,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button 
-              onClick={() => scrollToSection('cta')}
+              onClick={() => scrollToSection('pricing')}
               size="sm"
               className="button-gradient text-white shadow-lg"
             >

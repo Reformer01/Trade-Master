@@ -52,13 +52,13 @@ const PricingTier = ({
 
 export const PricingSection = () => {
   return (
-    <section className="container px-4 py-24">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
       <div className="max-w-2xl mx-auto text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl md:text-6xl font-cinzel font-normal mb-6 text-emerald-100"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cinzel font-normal mb-6 text-emerald-100"
         >
           Choose Your{" "}
           <span className="text-gradient font-medium">Trading Plan</span>
@@ -67,13 +67,13 @@ export const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.5 }}
-          className="text-lg text-emerald-300 font-serif"
+          className="text-base sm:text-lg text-emerald-300 font-serif"
         >
           Select the perfect trading plan with advanced features and competitive fees
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
         <PricingTier
           name="Basic Trader"
           price="$0"

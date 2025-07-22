@@ -7,37 +7,37 @@ import { Card } from "./ui/card";
 
 const testimonials = [
   {
-    name: "Adebayo Okonkwo",
+    name: "Reformer Ejembi",
     role: "Professional Trader",
     image: "https://avatars.githubusercontent.com/u/1234567?v=4",
     content: "The real-time market data and advanced trading features have significantly improved my trading performance. The platform's security measures give me complete confidence."
   },
   {
-    name: "Chioma Nwankwo",
+    name: "Caleb Ogbike",
     role: "Crypto Fund Manager",
     image: "https://avatars.githubusercontent.com/u/2345678?v=4",
     content: "TradeMaster's institutional-grade tools have transformed our trading strategy. The API integration and automated features have saved us countless hours of manual work."
   },
   {
-    name: "Kemi Adebisi",
+    name: "Daniel Adenekan",
     role: "Early Crypto Investor",
     image: "https://avatars.githubusercontent.com/u/3456789?v=4",
     content: "The customer support is exceptional, and the platform's intuitive design made getting started with crypto trading seamless. A true game-changer for both beginners and professionals."
   },
   {
-    name: "Emeka Ogbonna",
+    name: "Shalom A.G",
     role: "DeFi Developer",
     image: "https://avatars.githubusercontent.com/u/4567890?v=4",
     content: "We've seen remarkable improvements in our trading efficiency since switching to TradeMaster. The smart order routing and liquidity aggregation features are particularly impressive."
   },
   {
-    name: "Funmilayo Ajayi",
+    name: "Precious Ejembi",
     role: "Crypto Security Expert",
     image: "https://avatars.githubusercontent.com/u/5678901?v=4",
     content: "The security features are robust and the regular updates keep us ahead of emerging threats. It's exactly what the crypto industry needed for institutional adoption."
   },
   {
-    name: "Olumide Fashola",
+    name: "Rihaanat Adeyemo",
     role: "Portfolio Manager",
     image: "https://avatars.githubusercontent.com/u/6789012?v=4",
     content: "The platform's ability to handle complex trading strategies while maintaining simplicity in its interface is remarkable. It's been invaluable for our portfolio management operations."
@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
           <div className="relative flex overflow-hidden py-4">
             <div className="animate-marquee flex min-w-full shrink-0 items-stretch gap-8">
               {testimonials.map((testimonial, index) => (
-                <Card key={`${index}-1`} className="w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
+                <Card key={`${index}-1`} className="w-full sm:w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
                   <div className="flex items-center gap-4 mb-6">
                     <Avatar className="h-12 w-12">
                       <AvatarImage src={testimonial.image} />
@@ -84,7 +84,7 @@ const TestimonialsSection = () => {
             </div>
             <div className="animate-marquee flex min-w-full shrink-0 items-stretch gap-8">
               {testimonials.map((testimonial, index) => (
-                <Card key={`${index}-2`} className="w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
+                <Card key={`${index}-2`} className="w-full sm:w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
                   <div className="flex items-center gap-4 mb-6">
                     <Avatar className="h-12 w-12">
                       <AvatarImage src={testimonial.image} />

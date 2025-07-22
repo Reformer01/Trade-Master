@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const LogoCarousel = () => {
   const logos = [
-    "/images/1f747d7e-0025-4f65-b0dd-3264135dfbdf.png", // Advanced Trading Interface
-    "/logos/logoipsum-381.svg", // Portfolio Management
+    "/logos/logoipsum-381.svg", // Advanced Trading Interface
+    "/logos/logoipsum-custom-logo (6).svg", // Portfolio Management
     "/logos/logoipsum-custom-logo (2).svg", // Security & Verification
     "/logos/logoipsum-custom-logo (3).svg", // Performance Analytics
     "/logos/logoipsum-custom-logo (4).svg", // Partner logo 1
@@ -15,9 +15,9 @@ const LogoCarousel = () => {
   ];
 
   const extendedLogos = [...logos, ...logos, ...logos];
-
+  
   return (
-    <div className="w-full overflow-hidden bg-background/50 backdrop-blur-sm py-12 mt-20">
+    <div className="w-full overflow-hidden bg-background/50 backdrop-blur-sm py-8">
       <motion.div 
         className="flex space-x-16"
         initial={{ opacity: 0, x: "0%" }}
@@ -28,7 +28,7 @@ const LogoCarousel = () => {
         transition={{
           opacity: { duration: 0.5 },
           x: {
-            duration: 15, // Reduced from 25 to 15 seconds
+            duration: 15,
             repeat: Infinity,
             ease: "linear",
             delay: 0.5
@@ -45,7 +45,10 @@ const LogoCarousel = () => {
             key={`logo-${index}`}
             src={logo}
             alt={`Partner logo ${index + 1}`}
-            className="h-8 object-contain"
+            className="h-6 sm:h-8 object-contain"
+            loading="lazy" // Add lazy loading
+            width="100" // Add width and height attributes
+            height="32"
             initial={{ opacity: 0.5 }}
             whileHover={{ 
               opacity: 1,
