@@ -14,74 +14,132 @@ import { images } from "@/config/images";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground w-full overflow-x-hidden">
       <Navigation />
       
-      {/* Hero Section - Redesigned for better responsiveness */}
+      {/* Hero Section - Modern Redesign */}
       <motion.section 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="relative min-h-screen flex items-center overflow-hidden"
-        style={{
-          backgroundImage: `url("${images.hero}")`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/60 to-emerald-900/80 backdrop-blur-sm" />
-        
-        {/* Background decoration */}
-        <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-xl"></div>
-          <div className="absolute bottom-20 left-10 w-40 h-40 bg-blue-500/10 rounded-full blur-xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl"></div>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-1/2 -left-1/4 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-3xl animate-float-medium"></div>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gradient-to-t from-emerald-900/80 to-transparent"></div>
+          
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]">
+            <div className="absolute inset-0 [background-image:linear-gradient(to_right,#4a4a4a_1px,transparent_1px),linear-gradient(to_bottom,#4a4a4a_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+          </div>
+          
+          {/* Animated Orbs */}
+          <motion.div 
+            className="absolute top-1/4 left-1/4 w-4 h-4 bg-emerald-400 rounded-full"
+            animate={{
+              y: [0, -30, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.7, 1, 0.7]
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div 
+            className="absolute top-2/3 right-1/3 w-3 h-3 bg-cyan-400 rounded-full"
+            animate={{
+              y: [0, -20, 0],
+              scale: [1, 1.3, 1],
+              opacity: [0.5, 0.9, 0.5]
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
         </div>
         
         {/* Content Container */}
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-20 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center min-h-[75vh] sm:min-h-[80vh]">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center min-h-[calc(100vh-5rem)]">
             
             {/* Left Column - Content */}
-            <div className="text-center lg:text-left order-1 lg:order-1">
+            <motion.div 
+              className="text-center lg:text-left order-1 lg:order-1"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            >
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="inline-flex items-center px-4 py-2 rounded-full glass mb-6"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="inline-flex items-center px-4 py-2 rounded-full border border-emerald-400/20 bg-emerald-900/20 backdrop-blur-sm mb-8 group"
               >
-                <img 
-                  src="/logos/logoipsum-381.svg" 
-                  alt="Feature Icon" 
-                  className="w-4 h-4 mr-2"
-                />
-                <span className="text-sm font-medium text-emerald-200">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                  className="mr-3"
+                >
+                  <div className="w-4 h-4 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400" />
+                </motion.div>
+                <span className="text-sm font-medium bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-transparent">
                   Professional Trading Platform
                 </span>
+                <motion.div 
+                  className="ml-2 w-2 h-2 rounded-full bg-emerald-400"
+                  animate={{ opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                />
               </motion.div>
               
               <motion.h1 
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-cinzel mb-4 sm:mb-6 tracking-tight leading-tight"
+                transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 tracking-tight leading-tight"
               >
-                <span className="text-emerald-100 block">
+                <motion.span 
+                  className="block text-slate-200"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.8 }}
+                >
                   Master the art of
-                </span>
-                <span className="text-gradient font-medium block mt-2">
+                </motion.span>
+                <motion.span 
+                  className="block mt-2 md:mt-3 lg:mt-4 bg-gradient-to-r from-emerald-300 via-cyan-300 to-emerald-300 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0, backgroundPosition: '200% center' }}
+                  transition={{ 
+                    delay: 0.5, 
+                    duration: 0.8,
+                    backgroundPosition: { 
+                      duration: 3,
+                      repeat: Infinity,
+                      repeatType: 'reverse',
+                      ease: 'linear'
+                    }
+                  }}
+                >
                   crypto trading
-                </span>
+                </motion.span>
               </motion.h1>
               
               <motion.p 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="text-sm sm:text-base md:text-lg text-emerald-200 mb-6 sm:mb-8 max-w-full sm:max-w-lg lg:max-w-xl mx-auto lg:mx-0 font-serif leading-relaxed"
+                transition={{ delay: 0.6, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-base sm:text-lg md:text-xl text-slate-300 mb-8 sm:mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed"
               >
                 Advanced cryptocurrency trading platform with institutional-grade tools and real-time market analytics.{" "}
-                <span className="text-emerald-100 font-medium">Start trading professionally today.</span>
+                <span className="text-emerald-300 font-medium">Start trading professionally today.</span>
               </motion.p>
 
               {/* Dashboard - Shows below text on mobile, hidden on desktop */}
@@ -147,57 +205,90 @@ const Index = () => {
               </div>
               
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+                transition={{ delay: 0.7, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start"
               >
-                <Button 
-                  size="lg" 
-                  className="button-gradient text-white border-emerald-400 border shadow-lg hover:scale-105 transition-transform"
-                  onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="relative group"
                 >
-                  Start Trading Now
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-emerald-400/50 text-emerald-200 hover:bg-emerald-400/10 hover:text-emerald-100"
-                  onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-300 group-hover:duration-200"></div>
+                  <Button 
+                    size="lg" 
+                    className="relative w-full sm:w-auto px-8 py-6 text-base font-medium bg-gradient-to-r from-emerald-600 to-cyan-600 text-white rounded-xl shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all duration-300"
+                    onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    <span className="relative z-10 flex items-center">
+                      Start Trading Now
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </Button>
+                </motion.div>
+                
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="relative group"
                 >
-                  View Features <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="relative w-full sm:w-auto px-8 py-6 text-base font-medium border-emerald-400/30 text-emerald-100 hover:bg-emerald-900/30 hover:border-emerald-400/50 hover:text-white transition-all duration-300"
+                    onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    <span className="relative z-10 flex items-center">
+                      Explore Features
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </Button>
+                </motion.div>
               </motion.div>
               
               {/* Stats Row */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9, duration: 0.6 }}
-                className="grid grid-cols-3 gap-3 sm:gap-4 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-emerald-400/20"
+                transition={{ delay: 0.9, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-emerald-400/10"
               >
-                <div className="text-center lg:text-left">
-                  <div className="text-base sm:text-xl lg:text-2xl font-bold text-emerald-100">500K+</div>
-                  <div className="text-xs sm:text-sm text-emerald-300">Active Traders</div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-base sm:text-xl lg:text-2xl font-bold text-emerald-100">$2.5B+</div>
-                  <div className="text-xs sm:text-sm text-emerald-300">Volume Traded</div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-base sm:text-xl lg:text-2xl font-bold text-emerald-100">99.9%</div>
-                  <div className="text-xs sm:text-sm text-emerald-300">Uptime</div>
+                <div className="grid grid-cols-3 gap-6 sm:gap-8">
+                  {[
+                    { value: '500K+', label: 'Active Traders' },
+                    { value: '$2.5B+', label: 'Volume Traded' },
+                    { value: '99.9%', label: 'Uptime' }
+                  ].map((stat, index) => (
+                    <motion.div 
+                      key={stat.label}
+                      className="text-center lg:text-left"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.9 + (index * 0.1), duration: 0.6 }}
+                    >
+                      <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-transparent">
+                        {stat.value}
+                      </div>
+                      <div className="mt-1 text-sm sm:text-base text-slate-400">{stat.label}</div>
+                    </motion.div>
+                  ))}
                 </div>
               </motion.div>
-            </div>
+            </motion.div>
             
             {/* Visual Element - Shows on desktop only */}
-            <div className="hidden lg:flex items-center justify-center relative order-2 lg:order-2">
+            <motion.div 
+              className="hidden lg:flex items-center justify-center relative order-2 lg:order-2"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            >
               <motion.div
-                initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
-                className="relative"
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="relative z-10 w-full max-w-xl"
               >
                 {/* Trading interface mockup */}
                 <div className="w-full max-w-md h-48 sm:h-64 bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-lg rounded-xl border border-emerald-400/20 p-4 sm:p-6 shadow-2xl">
@@ -249,9 +340,9 @@ const Index = () => {
                   animate={{ y: [10, -10, 10] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   className="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-500/20 rounded-full backdrop-blur-sm border border-blue-400/30"
-                ></motion.div>
+                />
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.section>

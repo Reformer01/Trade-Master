@@ -4,9 +4,9 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-12 mt-20">
-      <div className="container px-4">
-        <div className="glass glass-hover rounded-xl p-8">
+    <footer className="w-full py-12 mt-20 bg-gradient-to-b from-slate-900 to-slate-950">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="glass glass-hover rounded-xl p-6 sm:p-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
             <div className="space-y-4">
               <h3 className="font-medium text-lg">TradeMaster</h3>
